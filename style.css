@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/Hero.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+.navbar{
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button{
+    color: #fbfcfd;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.content{
+    color: #fbfcfd;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+h1{
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+}
+
+.side-bar{
+    width: 50px;
+    height: 100vh;
+    background: linear-gradient (#7f9193, #3d3e40);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.astronaut{
+    width: 20%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.space-dust img{
+    width: 3px;
+    animation: space-dust 7s linear infinite;
+}
+
+
+.space-dust{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+
+
+@keyframes space-dust{
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+
+.space-dust img:nth-child(1){
+    animation-delay: 2s;
+}
+.space-dust img:nth-child(2){
+    animation-delay: 1s;
+}
+.space-dust img:nth-child(3){
+    animation-delay: 3s;
+}
+.space-dust img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.space-dust img:nth-child(5){
+    animation-delay: 3s;
+}
