@@ -12,12 +12,12 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    overflow: hidden;
+ 
 
 }
 
 .logo {
-    width: 100px;
+    width: 300px;
     cursor: pointer;
 }
 
@@ -27,7 +27,24 @@
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+}
+
+
+
+a{
+    text-decoration: solid;
+    color: #fbfcfd;
+    font-size: 16px;
+
+    transition: transform 0.3s;
+}
+
+a:hover{
+    color:rgb(166, 129, 6);
+    transform: translateY(-5px);
 }
 
 button{
@@ -38,6 +55,14 @@ button{
     border-radius: 5px;
     outline: none;
     cursor: pointer;
+
+    transition: transform 0.3s;
+}
+
+button:hover{
+    color:rgb(166, 129, 6);
+    border-color:rgb(166, 129, 6);
+    transform: translateY(-5px);
 }
 
 .content{
@@ -45,8 +70,30 @@ button{
     position: absolute;
     top: 50%;
     left: 8%;
-    transform: translateY(-50%);
+    right: 8%;
+    line-height: 32px;
+    transform: translateY(-30%);
     z-index: 2;
+}
+
+.content-video{
+    color: #fbfcfd;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    
+    line-height: 32px;
+    transform: translateY(-30%);
+    z-index: 2;
+    overflow-y: scroll;
+}
+
+.footer{
+    color: #fbfcfd;
+    position: absolute;
+    top: 80%;
+    left: 8%;
+    transform: translateY(-110%);
 }
 
 h1{
@@ -65,12 +112,14 @@ h1{
 }
 
 .astronaut{
-    width: 20%;
-    height: 50%;
-    margin: auto;
+    width: 40%;
+    height: 60%;
+    margin-left: 50%;
+    margin-top: 10%;
     display: flex;
-    align-items: right;
-    justify-content: right;
+    align-items: left;
+    justify-content: left;
+    animation: floating ease-in-out 15s infinite
 }
 
 .space-dust img{
@@ -121,4 +170,17 @@ h1{
 }
 .space-dust img:nth-child(5){
     animation-delay: 3s;
+}
+
+
+@keyframes floating{
+    0% {
+        transform: translate(0%, 0%);
+    }
+    50%{
+        transform: translate(0%, 5%);
+    }
+    100%{
+        transform: translate(0%, 0%);
+    }
 }
