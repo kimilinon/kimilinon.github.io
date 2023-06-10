@@ -2,24 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Jost', sans-serif;
 }
 
 .hero {
     width: 100%;
     height: 100vh;
     background-image: url(Images/Hero.jpg);
+    background-repeat: repeat-y;
     background-size: cover;
     background-position: center;
     position: relative;
- 
-
 }
 
-.logo {
-    width: 300px;
-    cursor: pointer;
-}
 
 .navbar{
     width: 85%;
@@ -32,26 +27,33 @@
     top: 0;
 }
 
-
+body {
+    margin: 0;
+    padding: 10;
+    overflow: visible;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: 20px;
+}
 
 a{
     text-decoration: solid;
-    color: #fbfcfd;
-    font-size: 16px;
-
+    color: #fafafa;
+    font-size: 20px;
+    letter-spacing: 1px;
     transition: transform 0.3s;
 }
 
 a:hover{
-    color:rgb(166, 129, 6);
+    color:#cd8f00;
     transform: translateY(-5px);
 }
 
 button{
-    color: #fbfcfd;
+    color: #fafafa;
     padding: 10px 25px;
     background: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #fafafa;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
@@ -60,13 +62,13 @@ button{
 }
 
 button:hover{
-    color:rgb(166, 129, 6);
-    border-color:rgb(166, 129, 6);
+    color:#cd8f00;
+    border-color:#cd8f00;
     transform: translateY(-5px);
 }
 
 .content{
-    color: #fbfcfd;
+    color: #fafafa;
     position: absolute;
     top: 50%;
     left: 8%;
@@ -74,45 +76,51 @@ button:hover{
     line-height: 32px;
     transform: translateY(-30%);
     z-index: 2;
+    overflow: scroll;
+}
+
+
+
+.overlay { 
+    color: #fafafa;
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    right: 8%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    transform: translateY(-30%);
+    z-index: 2;
+    overflow: scroll;
+    margin: 40px;
+    padding: 40px;
 }
 
 .content-video{
     color: #fbfcfd;
     position: absolute;
-    top: 50%;
-    left: 25%;
-    
-    line-height: 32px;
-    transform: translateY(-30%);
-    z-index: 2;
-    overflow-y: scroll;
-}
-
-.footer{
-    color: #fbfcfd;
-    position: absolute;
-    top: 80%;
-    left: 8%;
-    transform: translateY(-110%);
+    top: 300px;
+    left: 450px;
 }
 
 h1{
     font-size: 80px;
     margin: 10px 0 30px;
-    line-height: 80px;
+    line-height: 100px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #fafafa;
 }
 
-.side-bar{
-    width: 50px;
-    height: 100vh;
-    background: linear-gradient (#7f9193, #3d3e40);
-    position: absolute;
-    right: 0;
-    top: 0;
+p {
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 40px;
 }
+
 
 .astronaut{
-    width: 40%;
+    width: 35%;
     height: 60%;
     margin-left: 50%;
     margin-top: 10%;
@@ -184,3 +192,76 @@ h1{
         transform: translate(0%, 0%);
     }
 }
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 20px;
+    left: 40px;
+    margin-right: 5px;
+    text-decoration: solid;
+    color: #fafafa;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 20px;
+    size-adjust: initial;
+    font-size: 16px;
+  }
+
+  .share-text {
+    text-decoration: solid;
+    color: #fafafa;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .social-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    margin: 20px;
+    size-adjust: initial;
+  }
+  
+  .social-icons a {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    margin-left: 5px;
+  }
+
+  
+  .icon-facebook {
+    background-image: url("PNG/Facebook.png");
+  }
+  
+  .icon-twitter {
+    background-image: url("PNG/Twitter.png");
+  }
+  
+  .icon-instagram {
+    background-image: url("PNG/Instagram.png");
+  }
+  
